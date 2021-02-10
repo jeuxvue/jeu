@@ -1,0 +1,69 @@
+// declarative styles
+
+@mixin block-title {
+  @include font-16;
+  font-weight: $semibold;
+}
+
+@mixin block-text {
+  @include font-16;
+  font-weight: $normal;
+}
+
+// font-weight variables
+
+$light: 100;
+$semilight: 200;
+$normal: 400;
+$semibold: 600;
+$bold: 900;
+
+// sizes
+
+@mixin font-14 {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+@mixin font-16 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+@mixin font-18 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-20 {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-24 {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+
+@mixin font-32 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+@mixin font-48 {
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -0.01em;
+}
+
+@mixin font-72 {
+  font-size: 72px;
+  line-height: 92px;
+  letter-spacing: -0.02em;
+}
