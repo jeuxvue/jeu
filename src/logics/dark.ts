@@ -1,8 +1,9 @@
-import { watch, computed } from 'vue'
-import { usePreferredDark } from '@vueuse/core'
-import { colorSchema } from './store'
+import { watch, computed, Ref } from 'vue'
+import { usePreferredDark, useStorage } from '@vueuse/core'
 
 const preferredDark = usePreferredDark()
+
+export const colorSchema = useStorage('color-schema', 'auto') as Ref<'auto' | 'dark' | 'light'>
 
 export const isDark = computed({
   get() {

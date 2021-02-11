@@ -1,5 +1,8 @@
 {
-  "name": "glist",
+  "name": "jeu",
+  "description": "",
+  "version": "1.0.0",
+  "main": "src/main.js",
   "scripts": {
     "dev": "vite --port 3333 --open",
     "build": "cross-env NODE_ENV=production vite-ssg build"
@@ -43,5 +46,10 @@
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "off"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeuxvue/jeu.git"
+  },
+  "license": "MIT"
 }

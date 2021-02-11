@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  @apply bg-blueGray-100;
+}
+
+html.dark {
+  @apply bg-trueGray-900;
+}
+
+*:focus,
+button:focus {
+  outline: none;
+}
+*:focus-visible {
+  @apply focus-visible:ring-2 ring-violet-300;
+}
+
+#nprogress {
+  pointer-events: none;
+
+  .bar {
+    @apply bg-violet-600 opacity-75;
+
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+  }
+}
+

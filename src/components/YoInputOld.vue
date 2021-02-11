@@ -81,60 +81,60 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-@import '@/theme/mixins';
-@import '@/theme/fonts';
+// <style lang='scss'>
+// @import '@/theme/mixins';
+// @import '@/theme/fonts';
 
-.yo-input {
-  position: relative;
-  background: $background;
-  padding: 0 $input-padding;
-  border-radius: $input-border-radius;
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr;
-  column-gap: $input-padding;
-  align-items: center;
+// .yo-input {
+//   position: relative;
+//   background: $background;
+//   padding: 0 $input-padding;
+//   border-radius: $input-border-radius;
+//   display: inline-grid;
+//   grid-auto-flow: column;
+//   grid-template-columns: 1fr;
+//   column-gap: $input-padding;
+//   align-items: center;
 
-  &:focus-within {
-    @include default-focus;
-  }
+//   &:focus-within {
+//     @include default-focus;
+//   }
 
-  &__inner {
-    // reset
-    margin: 0;
-    border: 0;
-    padding: 0;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
-    background: none;
-    color: inherit;
-    font-family: inherit;
-    @include font-16;
+//   &__inner {
+//     // reset
+//     margin: 0;
+//     border: 0;
+//     padding: 0;
+//     display: inline-block;
+//     vertical-align: middle;
+//     white-space: normal;
+//     background: none;
+//     color: inherit;
+//     font-family: inherit;
+//     @include font-16;
 
-    padding: $input-padding 0;
+//     padding: $input-padding 0;
 
-    &::placeholder {
-      color: $text-secondary;
-    }
+//     &::placeholder {
+//       color: $text-secondary;
+//     }
 
-    &:focus {
-      outline: 0;
-    }
+//     &:focus {
+//       outline: 0;
+//     }
 
-    // removes arrows on type=number
-    -moz-appearance: textfield;
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-  }
+//     // removes arrows on type=number
+//     -moz-appearance: textfield;
+//     &::-webkit-outer-spin-button,
+//     &::-webkit-inner-spin-button {
+//       -webkit-appearance: none;
+//       margin: 0;
+//     }
+//   }
 
-  &__toggle {
-    font-size: 0;
-  }
-}
+//   &__toggle {
+//     font-size: 0;
+//   }
+// }
 
-</style>
+// </style>

@@ -1,53 +1,28 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
-import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Prism from 'markdown-it-prism'
 
 export default defineConfig({
   alias: {
     '@/': `${path.resolve(__dirname, 'src')}/`,
   },
   plugins: [
-    Vue({
-      include: [/\.vue$/, /\.md$/],
-    }),
-
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages({
-      extensions: ['vue'],
-    }),
-
-    // https://github.com/antfu/vite-plugin-components
+    vue(),
+    Pages(),
     ViteComponents({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['vue'],
-
-      // auto import icons
-      customComponentResolvers: [
-        // https://github.com/antfu/vite-plugin-icons
-        ViteIconsResolver({
-          componentPrefix: 'i',
-          // enabledCollections: ['carbon']
-        }),
-      ],
+      customComponentResolvers: ViteIconsResolver(),
     }),
-
-    // https://github.com/antfu/vite-plugin-icons
     ViteIcons(),
-
-    // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
       inlineRegister: false,
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
+        name: 'Jeu',
+        short_name: 'jeu',
+        theme_color: '#121212',
         icons: [
           {
             src: '/pwa-192x192.png',
@@ -63,12 +38,10 @@ export default defineConfig({
       },
     }),
   ],
-  // https://github.com/antfu/vite-ssg
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
   },
-
   optimizeDeps: {
     include: [
       'vue',
