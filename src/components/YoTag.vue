@@ -1,6 +1,6 @@
 <template>
-  <div class='yo-tag' :class='classObject'>
-    <slot></slot>
+  <div class="yo-tag" :class="classObject">
+    <slot />
   </div>
 </template>
 

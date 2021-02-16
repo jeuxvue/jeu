@@ -4,8 +4,8 @@ import { ref } from 'vue'
 const inputTextValue = ref('')
 const inputPasswordValue = ref('')
 const inputNumberValue = ref(0)
-
 const liked = ref(false)
+
 </script>
 
 <template>
@@ -74,6 +74,11 @@ const liked = ref(false)
         <YoBox class="w-full max-w-lg" content-class="flex gap-4">
           <LikeButton :liked="liked" />
         </YoBox>
+      </YoSection>
+      <YoSection title="Studios">
+        <div class="flex flex-col gap-4">
+          <YoCard :data="{name:'test', image:'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-979nF8TZP2xC.jpg', link: '/'}" />
+        </div>
       </YoSection>
     </div>
   </div>
