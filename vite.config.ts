@@ -5,6 +5,7 @@ import Pages from 'vite-plugin-pages'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import { VitePWA } from 'vite-plugin-pwa'
+import WindiCSS from 'vite-plugin-windicss'
 
 export default defineConfig({
   alias: {
@@ -12,6 +13,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    ...WindiCSS(),
     Pages(),
     ViteComponents({
       customComponentResolvers: ViteIconsResolver(),

@@ -25,7 +25,7 @@ const value = useVModel(props, 'modelValue', emit)
 <template>
   <input
     v-model="value"
-    class="px-4 pb-1.5 pt-1 rounded bg-blueGray-100 dark:bg-trueGray-900 disabled:cursor-default"
+    class="px-4 pb-1.5 pt-1 rounded bg-blue-gray-100 dark:bg-true-gray-900 disabled:cursor-default"
     :type="type"
     :placeholder="placeholder"
   >
