@@ -1,5 +1,6 @@
 <script setup lang='ts'>
-import { computed, defineEmit, defineProps, ref } from 'vue'
+import { useVModel } from '@vueuse/core'
+import { ref, defineEmit, defineProps } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -14,20 +15,9 @@ const props = defineProps({
 
 const emit = defineEmit(['update:modelValue'])
 
-const value = computed({
-  get() {
-    return props.modelValue
-  },
-  set(value: string) {
-    emit('update:modelValue', value)
-  },
-})
+const value = useVModel(props, 'modelValue', emit)
 
 const isVisible = ref(false)
-
-function toggleVisibility() {
-  isVisible.value = !isVisible.value
-}
 </script>
 
 <template>
@@ -37,7 +27,7 @@ function toggleVisibility() {
       :type="isVisible ? 'text' : 'password'"
       :placeholder="placeholder"
     />
-    <button class="absolute right-0 h-full px-2 rounded " @click="toggleVisibility">
+    <button class="absolute right-0 h-full px-2 rounded " @click="isVisible = !isVisible">
       <i-carbon-view v-if="isVisible" />
       <i-carbon-view-off v-else />
     </button>
