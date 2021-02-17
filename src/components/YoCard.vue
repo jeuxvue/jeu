@@ -1,5 +1,5 @@
 <template>
-  <div class="flex text-base tracking-wide bg-white rounded shadow-sm dark:bg-gray-800">
+  <YoBox class="flex p-0">
     <a :href="data.link">
       <img class="w-25 h-25 rounded-l-lg object-cover" :src="data.image" alt="">
     </a>
@@ -8,7 +8,7 @@
         {{ data.name }}
       </a>
     </div>
-  </div>
+  </Yobox>
 </template>
 
 <script setup lang="ts">
