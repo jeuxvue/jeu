@@ -25,17 +25,17 @@ watch(() => props.liked, liked => isLiked.value = liked)
 
 <template>
   <button
-    class="p-1.5 rounded text-rose-300 bg-rose-500 hover:bg-rose-600 disabled:bg-rose-400 disabled:text-rose-100 disabled:cursor-default"
+    class="w-9 h-9 p-1.5 rounded text-rose-300 bg-rose-500 hover:bg-rose-600 disabled:bg-rose-400 disabled:text-rose-100 disabled:cursor-default focus:outline-none focus-visible:ring ring-rose-300"
     :disabled="disabled"
     @click="handleClick"
   >
     <i-jam-heart-f
       v-if="isLiked"
-      class="w-6 h-6 mt-0.5 -mb-0.5 fill-current"
+      class="w-6 h-6 fill-current"
     />
     <i-jam-heart
       v-else
-      class="w-6 h-6 mt-0.5 -mb-0.5 fill-current"
+      class="w-6 h-6 fill-current"
     />
   </button>
 </template>

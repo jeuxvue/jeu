@@ -6,13 +6,21 @@ html.dark {
   @apply bg-trueGray-900;
 }
 
-*:focus,
+/* *:focus,
 button:focus {
   outline: none;
 }
-*:focus-visible {
-  @apply focus-visible:ring-2 ring-violet-300;
+:focus-visible {
+  outline: none;
+} */
+
+
+button {
+  @apply focus:outline-none !important;
+  @apply focus-visible:outline-none;
+  @apply focus-visible:ring-2 focus-visible:rounded ring-red-300;
 }
+
 
 #nprogress {
   pointer-events: none;
@@ -30,3 +38,33 @@ button:focus {
   }
 }
 
+/* links */
+
+.link {
+  @apply hover:text-violet-500;
+  @apply dark:hover:text-violet-400;
+}
+
+/* buttons */
+
+
+.btn-primary {
+  @apply text-white bg-violet-500 hover:bg-violet-600 ring-violet-300;
+}
+
+.btn-warning {
+  @apply text-black  bg-yellow-400 hover:bg-yellow-500 ring-yellow-200;
+}
+
+.btn-danger {
+  @apply text-white bg-red-500 hover:bg-red-600 ring-red-300;
+}
+
+.btn-success {
+  @apply text-white bg-green-500 hover:bg-green-600 ring-green-300;
+}
+
+.btn {
+  @apply px-4 pb-1.5 pt-1 rounded focus:ring;
+  @apply disabled:cursor-default disabled:bg-gray-300 disabled:text-gray-500 dark:disabled:bg-gray-600 dark:disabled:text-gray-400; 
+}

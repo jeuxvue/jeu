@@ -22,36 +22,22 @@ const liked = ref(false)
     <div class="flex flex-col flex-wrap gap-8 h-min">
       <YoSection title="buttons">
         <YoBox class="flex gap-4">
-          <YoButton type="primary">
+          <button class="btn btn-primary">
             Primary
-          </YoButton>
-          <YoButton type="warning">
+          </button>
+          <button class="btn btn-warning">
             Warning
-          </YoButton>
-          <YoButton type="danger">
+          </button>
+          <button class="btn btn-danger">
             Danger
-          </YoButton>
-          <YoButton type="success">
+          </button>
+          <button class="btn btn-success">
             Success
-          </YoButton>
+          </button>
+          <button disabled class="btn btn-primary">
+            Primary
+          </button>
           <LikeButton />
-        </YoBox>
-      </YoSection>
-      <YoSection title="disabled buttons">
-        <YoBox class="flex gap-4">
-          <YoButton disabled type="primary">
-            Primary
-          </YoButton>
-          <YoButton disabled type="warning">
-            Warning
-          </YoButton>
-          <YoButton disabled type="danger">
-            Danger
-          </YoButton>
-          <YoButton disabled type="success">
-            Success
-          </YoButton>
-          <LikeButton disabled />
         </YoBox>
       </YoSection>
       <YoSection title="inputs">
