@@ -8,9 +8,9 @@
         <div class="flex flex-col flex-shrink-0 gap-4 -mt-40 w-54">
           <img class="rounded" src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-979nF8TZP2xC.jpg" alt="">
           <div class="flex w-full gap-4">
-            <YoButton class="flex-grow">
+            <button class="flex-grow btn btn-primary">
               Add to List
-            </YoButton>
+            </button>
             <LikeButton />
           </div>
         </div>
