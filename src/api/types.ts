@@ -65,6 +65,34 @@ export type Game = {
       }
     }
   ]
+  'parent_platforms': [
+    {
+      'platform': {
+        'id': number
+        'slug': string
+        'name': string
+      }
+    }
+  ]
+  tags: [
+    {
+      id: number
+      name: string
+      slug: string
+      language: string
+      games_count: number
+      image_background: string
+    }
+  ]
+  genres: [
+    {
+      id: number
+      name: string
+      slug: string
+      games_count: number
+      image_background: string
+    }
+  ]
   developers?: {
     games_count: number
     id: number
