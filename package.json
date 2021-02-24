@@ -5,7 +5,9 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build"
+    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "preinstall": "npx -y only-allow pnpm"
+    
   },
   "dependencies": {
     "@vueuse/core": "^4.1.0",
