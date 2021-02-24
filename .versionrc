@@ -1,0 +1,16 @@
+{
+  "types": [
+    {"type": "chore", "section":":broom: Others", "hidden": false},
+    {"type": "revert", "section":":fire: Reverts", "hidden": false},
+    {"type": "feat", "section": ":purple_heart: Features", "hidden": false},
+    {"type": "fix", "section": ":beetle: Bug Fixes", "hidden": false},
+    {"type": "improvement", "section": ":wheelchair: Feature Improvements", "hidden": false},
+    {"type": "docs", "section":":bookmark_tabs: Docs", "hidden": false},
+    {"type": "style", "section":":art: Styling", "hidden": false},
+    {"type": "refactor", "section":":gear: Code Refactoring", "hidden": false},
+    {"type": "perf", "section":":zap: Performance Improvements", "hidden": false},
+    {"type": "test", "section":":yarn: Tests", "hidden": false},
+    {"type": "build", "section":":bricks: Build System", "hidden": false},
+    {"type": "ci", "section":":turtle: CI", "hidden":false}
+  ]
+}
