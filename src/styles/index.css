@@ -41,7 +41,7 @@ button {
 /* links */
 
 .link {
-  @apply hover:text-violet-500;
+  @apply hover:text-violet-500 hover:cursor-pointer;
   @apply dark:hover:text-violet-400;
 }
 
