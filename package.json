@@ -10,14 +10,18 @@
   "dependencies": {
     "@vueuse/core": "^4.1.0",
     "@vueuse/head": "^0.2.3",
+    "axios": "^0.21.1",
     "equal-vue": "^0.7.21",
     "nprogress": "^0.2.0",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.4.3",
     "@iconify/json": "^1.1.298",
+    "@moeta/eslint-config-base": "^0.2.0",
+    "@moeta/eslint-config-vue": "^0.2.0",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@vitejs/plugin-vue": "^1.1.4",
@@ -33,15 +37,11 @@
     "vite-plugin-icons": "^0.2.1",
     "vite-plugin-pages": "^0.2.3",
     "vite-plugin-pwa": "^0.4.6",
-    "vite-plugin-windicss": "^0.1.15",
+    "vite-plugin-windicss": "^0.3.0",
     "vite-ssg": "^0.8.0"
   },
   "eslintConfig": {
-    "extends": "@antfu/eslint-config",
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "off"
-    }
+    "extends": "@antfu/eslint-config"
   },
   "repository": {
     "type": "git",
