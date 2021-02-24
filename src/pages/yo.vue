@@ -40,6 +40,14 @@ const liked = ref(false)
           <LikeButton />
         </YoBox>
       </YoSection>
+      <YoSection title="buttons">
+        <YoBox class="flex gap-4">
+          <PlatformTag name="Xbox" />
+          <PlatformTag name="Playstation" />
+          <PlatformTag name="Nintendo" />
+          <PlatformTag name="PC" />
+        </YoBox>
+      </YoSection>
       <YoSection title="inputs">
         <YoBox class="w-full max-w-lg " content-class="grid items-end grid-cols-2 gap-y-8 gap-x-2">
           <InputWrap title="Text">
