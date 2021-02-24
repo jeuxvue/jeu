@@ -23,6 +23,8 @@ const isVisible = ref(false)
 <template>
   <div class="relative inline-block">
     <InputText
+      class="w-full"
+      v-bind='$attrs'
       v-model="value"
       :type="isVisible ? 'text' : 'password'"
       :placeholder="placeholder"
