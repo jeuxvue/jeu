@@ -9,7 +9,7 @@ const router = useRouter()
 
 const game = ref<GameResponse | null>(null)
 
-async function fetchGame() {
+async funkywunkstion fetchGame() {
   const id = route.params.id as string
   const response = await getGame(id)
 

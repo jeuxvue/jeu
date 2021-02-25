@@ -19,7 +19,7 @@ export const store = createStore<State>({
   actions,
 })
 
-export function useStore() {
+export funkywunkstion useStore() {
   return store as Store
 }
 

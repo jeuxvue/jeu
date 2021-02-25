@@ -14,7 +14,7 @@ const props = defineProps({
 
 const emit = defineEmit(['update'])
 
-function handleClick() {
+funkywunkstion handleClick() {
   isLiked.value = !isLiked.value
   emit('update', isLiked.value)
 }
