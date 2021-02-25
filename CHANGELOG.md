@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/jeuxvue/jeu/compare/v1.2.0...v1.2.1) (2021-02-25)
+
+
+### :art: Styling
+
+* change color ([15860a7](https://github.com/jeuxvue/jeu/commit/15860a7e10dd03a7bfa54da95427c89fa9e82777))
+
 ## [1.2.0](https://github.com/jeuxvue/jeu/compare/v1.1.0...v1.2.0) (2021-02-24)
 
 
