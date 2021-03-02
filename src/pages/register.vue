@@ -24,8 +24,8 @@ store.commit(Mutations.setUser)
     <p class="mt-8 mb-1 text-center">
       or use socials
     </p>
-    <button class="w-full text-gray-800 bg-white border border-gray-200 shadow-sm hover:bg-gray-50 btn">
+    <a href="#" class="inline-block w-full text-center text-gray-800 bg-white border border-gray-200 shadow-sm hover:bg-gray-50 btn">
       <i-mdi-google class="mr-2" /><span>Auth with Google</span>
-    </button>
+    </a>
   </YoBox>
 </template>
