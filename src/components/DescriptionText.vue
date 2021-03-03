@@ -17,7 +17,7 @@ const props = defineProps({
   },
   limit: {
     type: Number,
-    default: 1000,
+    default: 640,
   },
 })
 

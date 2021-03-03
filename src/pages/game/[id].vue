@@ -48,8 +48,7 @@ watch(route, fetchGame)
             <h2 class="text-xl">
               {{ game.name }}
             </h2>
-            <DescriptionText :text="game.description" limit="640" />
-            <!-- <div class="flex flex-col gap-4 mt-4" v-html="game.description" /> -->
+            <DescriptionText :text="game.description" />
           </div>
           <nav class="flex justify-around w-full mt-8 text-sm">
             <button class="p-3 link">
