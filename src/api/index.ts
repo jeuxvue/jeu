@@ -1,17 +1,22 @@
 import api from './axios'
 
-import { Game, Redirect } from './types'
+import { Game, ApiRedirect, ApiError, DeveloperGame } from './types'
 
 export function getGame(id: number | string) {
-  return api.get<Game | Redirect | Error>(`games/${id}`).then(r => r.data)
+  return api.get<Game | ApiRedirect | ApiError>(`games/${id}`).then(r => r.data)
 }
 
 export async function fetchGame(id: number | string): Promise<Game> {
   const res = await fetch(`https://api.rawg.io/api/games/${id as string}?key=${import.meta.env.VITE_API_RAWG_KEY}`)
-  const data = await res.json() as Game | Redirect
+  const data = await res.json() as Game | ApiRedirect
 
   if ('redirect' in data)
     return fetchGame(data.slug)
 
   return data
+}
+
+export async function getDeveloperGames(id: number | string) {
+  const params = { developers: id }
+  return api.get<DeveloperGame>('games', { params }).then(r => r.data)
 }

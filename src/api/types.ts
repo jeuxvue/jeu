@@ -121,6 +121,13 @@ export type Game = {
   }[]
 }
 
+export type DeveloperGame = {
+  count: number
+  next: string | null
+  previous: string | null
+  results: Game[]
+}
+
 export type ApiRedirect = {
   redirect: boolean
   slug: string
