@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/jeuxvue/jeu/compare/v1.3.0...v1.4.0) (2021-03-03)
+
+
+### :purple_heart: Features
+
+* add developers games page ([0c9684f](https://github.com/jeuxvue/jeu/commit/0c9684f6d696c6f6e38a3e12fa1a650a10b8bd62))
+
+
+### :beetle: Bug Fixes
+
+* change limit to avoid warnings ([1b75750](https://github.com/jeuxvue/jeu/commit/1b75750254339f0f572e25cc8550ad3ebc8fc709))
+
 ## [1.3.0](https://github.com/jeuxvue/jeu/compare/v1.2.0...v1.3.0) (2021-03-02)
 
 
