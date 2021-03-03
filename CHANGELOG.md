@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/jeuxvue/jeu/compare/v1.2.0...v1.3.0) (2021-03-02)
+
+
+### :art: Styling
+
+* change color ([15860a7](https://github.com/jeuxvue/jeu/commit/15860a7e10dd03a7bfa54da95427c89fa9e82777))
+
+
+### :broom: Others
+
+* **release:** 1.2.1 ([5051048](https://github.com/jeuxvue/jeu/commit/5051048dc6ec1d725523b299409242b3e8e23378))
+
+
+### :purple_heart: Features
+
+* add google auth button ([8620568](https://github.com/jeuxvue/jeu/commit/8620568a136f500176b33855df9d9faa83aacef8))
+
+
+### :beetle: Bug Fixes
+
+* change button to link ([9aa6ac2](https://github.com/jeuxvue/jeu/commit/9aa6ac2b102d2dd984c1775a6eea102e59caa490))
+
 ### [1.2.1](https://github.com/jeuxvue/jeu/compare/v1.2.0...v1.2.1) (2021-02-25)
 
 
