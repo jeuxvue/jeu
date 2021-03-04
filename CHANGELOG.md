@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/jeuxvue/jeu/compare/v1.4.2...v1.4.3) (2021-03-04)
+
+
+### :beetle: Bug Fixes
+
+* change image src ([bfa36ce](https://github.com/jeuxvue/jeu/commit/bfa36cecd39fdb0479b97957ef0a2866bfed571b))
+
 ### [1.4.2](https://github.com/jeuxvue/jeu/compare/v1.4.1...v1.4.2) (2021-03-04)
 
 
