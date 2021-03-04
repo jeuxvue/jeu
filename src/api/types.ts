@@ -128,6 +128,15 @@ export type DeveloperGame = {
   results: Game[]
 }
 
+export type DeveloperData = {
+  id: number
+  name: string
+  slug: string
+  games_count: string
+  image_background: string
+  description: string
+}
+
 export type ApiRedirect = {
   redirect: boolean
   slug: string

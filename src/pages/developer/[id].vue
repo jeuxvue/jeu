@@ -10,13 +10,11 @@
           <div>
             <div class="flex -mt-28">
               <h1 class="text-3xl">
-                Electronic arts
+                {{ developerData?.name }}
               </h1>
               <LikeButton class="ml-auto" />
             </div>
-            <div class="mt-20">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quod expedita, ex recusandae totam magnam eos quaerat quos tenetur ut! Rerum sunt blanditiis eaque possimus saepe, velit natus earum ducimus?
-            </div>
+            <DescriptionText v-if="developerData?.description" class="mt-20" :text="developerData?.description" />
           </div>
         </div>
       </div>
@@ -34,23 +32,31 @@
 </template>
 
 <script setup lang="ts">
-import type { DeveloperGame } from '@/api/types'
-import { getDeveloperGames } from '@/api'
+import type { DeveloperGame, DeveloperData } from '@/api/types'
+import { getDeveloperGames, getDeveloperData } from '@/api'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const developerGameData = ref<DeveloperGame | null>(null)
+const developerData = ref<DeveloperData | null>(null)
+const id = route.params.id as string
 
 async function fetchDeveloperGames() {
-  const id = route.params.id as string
   const response = await getDeveloperGames(id)
 
   if (response !== null)
     developerGameData.value = response
-
-  console.log(response.results)
 }
 
-onMounted(fetchDeveloperGames)
+async function fetchDeveloperData() {
+  const response = await getDeveloperData(id)
+  if (response !== null)
+    developerData.value = response
+}
+
+onMounted(() => {
+  fetchDeveloperData()
+  fetchDeveloperGames()
+})
 </script>

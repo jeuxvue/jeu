@@ -1,6 +1,6 @@
 import api from './axios'
 
-import { Game, ApiRedirect, ApiError, DeveloperGame } from './types'
+import { Game, ApiRedirect, ApiError, DeveloperGame, DeveloperData } from './types'
 
 export function getGame(id: number | string) {
   return api.get<Game | ApiRedirect | ApiError>(`games/${id}`).then(r => r.data)
@@ -19,4 +19,8 @@ export async function fetchGame(id: number | string): Promise<Game> {
 export async function getDeveloperGames(id: number | string) {
   const params = { developers: id }
   return api.get<DeveloperGame>('games', { params }).then(r => r.data)
+}
+
+export async function getDeveloperData(id: number | string) {
+  return api.get<DeveloperData>(`developers/${id}`).then(r => r.data)
 }
