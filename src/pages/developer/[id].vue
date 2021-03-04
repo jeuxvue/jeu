@@ -4,7 +4,7 @@
     <div class="flex flex-col items-center w-full pt-6">
       <div class="flex flex-row w-full max-w-screen-lg gap-12 px-12 xl:max-w-screen-xl">
         <div class=" flex flex-col flex-shrink-0 gap-4 -mt-30 w-54">
-          <img class="object-cover object-center w-full rounded h-72" src="https://media.rawg.io/media/games/998/9980c4296f311d8bcc5b451ca51e4fe1.jpg" alt="">
+          <img class="object-cover object-center w-full rounded h-72" :src="developerData?.image_background" alt="">
         </div>
         <div>
           <div>
