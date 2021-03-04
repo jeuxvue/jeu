@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/jeuxvue/jeu/compare/v1.4.1...v1.4.2) (2021-03-04)
+
+
+### :wheelchair: Feature Improvements
+
+* add second request to output dev data ([7c46581](https://github.com/jeuxvue/jeu/commit/7c4658172004e18e9510ab644cb7619ca287ec0b))
+
 ### [1.4.1](https://github.com/jeuxvue/jeu/compare/v1.4.0...v1.4.1) (2021-03-03)
 
 
