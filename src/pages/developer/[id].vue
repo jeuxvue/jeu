@@ -6,12 +6,12 @@
         <div class=" flex flex-col flex-shrink-0 gap-4 -mt-30 w-54">
           <img class="object-cover object-center w-full rounded h-72" :src="developerData?.image_background" alt="">
         </div>
-        <div>
+        <div class="w-full">
           <div>
-            <div class="flex -mt-28">
-              <h1 class="text-3xl">
+            <div class="flex -mt-28 w-full">
+              <div class="text-3xl">
                 {{ developerData?.name }}
-              </h1>
+              </div>
               <LikeButton class="ml-auto" />
             </div>
             <DescriptionText v-if="developerData?.description" class="mt-20" :text="developerData?.description" />
