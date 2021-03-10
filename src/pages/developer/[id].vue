@@ -40,19 +40,21 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const developerGameData = ref<DeveloperGame | null>(null)
 const developerData = ref<DeveloperData | null>(null)
-const id = route.params.id as string
+let id = route.params.id as string
+
+async function fetchDeveloperData() {
+  const response = await getDeveloperData(id)
+  if (response !== null) {
+    developerData.value = response
+    id = response.id.toString()
+  }
+}
 
 async function fetchDeveloperGames() {
   const response = await getDeveloperGames(id)
 
   if (response !== null)
     developerGameData.value = response
-}
-
-async function fetchDeveloperData() {
-  const response = await getDeveloperData(id)
-  if (response !== null)
-    developerData.value = response
 }
 
 onMounted(() => {
