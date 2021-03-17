@@ -16,8 +16,8 @@ export async function fetchGame(id: number | string): Promise<Game> {
   return data
 }
 
-export async function getDeveloperGames(id: number | string) {
-  const params = { developers: id }
+export async function getDeveloperGames(id: number | string, page: number) {
+  const params = { developers: id, page }
   return api.get<DeveloperGame>('games', { params }).then(r => r.data)
 }
 
