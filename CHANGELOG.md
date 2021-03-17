@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/jeuxvue/jeu/compare/v1.4.3...v1.5.0) (2021-03-17)
+
+
+### :beetle: Bug Fixes
+
+* fix margin-left ([931601d](https://github.com/jeuxvue/jeu/commit/931601db7539abb938d16fc696cae27687846b70))
+* increased timeout ([cfbe01b](https://github.com/jeuxvue/jeu/commit/cfbe01b0eff362d63da12664b6c789dd06bb3027))
+* slug request ([42162bd](https://github.com/jeuxvue/jeu/commit/42162bd67ec7eaed1c7e354234d67f0f58f0e851))
+
+
+### :purple_heart: Features
+
+* infinite scroll ([476d0c7](https://github.com/jeuxvue/jeu/commit/476d0c7fa1b6880f0d32aec962fe3eb05456d729))
+
 ### [1.4.3](https://github.com/jeuxvue/jeu/compare/v1.4.2...v1.4.3) (2021-03-04)
 
 
