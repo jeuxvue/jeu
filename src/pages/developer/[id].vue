@@ -51,7 +51,8 @@ let id = route.params.id as string
 
 function scroll() {
   window.onscroll = () => {
-    const bottomOfWindow = (window.innerHeight + window.scrollY) >= document.body.offsetHeight
+    const bottomOfWindow = (window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight
+    console.log(window.innerHeight, window.scrollY, document.body.offsetHeight)
     if (bottomOfWindow && developerGameData.value?.next !== null) {
       fetchDeveloperGames()
       page.value++
