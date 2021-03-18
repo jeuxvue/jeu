@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/jeuxvue/jeu/compare/v1.5.0...v1.5.1) (2021-03-18)
+
+
+### :beetle: Bug Fixes
+
+* height calclulation ([fc28c3d](https://github.com/jeuxvue/jeu/commit/fc28c3dc3f6874bfbf9d8ffb641a2988b0b368bd))
+
 ## [1.5.0](https://github.com/jeuxvue/jeu/compare/v1.4.3...v1.5.0) (2021-03-17)
 
 
