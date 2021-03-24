@@ -128,9 +128,13 @@ watch(route, fetchGame)
             <PlatformTag v-for="p of game.parent_platforms" :key="p.platform.id" :name="p.platform.name" />
           </YoSection>
           <YoSection title="Tags">
-            <YoBox v-for="t in game.tags" :key="t.id" class="p-1.25 text-center">
-              {{ t.name }}
-            </YoBox>
+            <template v-for="t in game.tags" :key="t.id">
+              <YoBox class="p-1.25 text-center">
+                <router-link class="link" :to="`/tag/${t.id}`">
+                  {{ t.name }}
+                </router-link>
+              </YoBox>
+            </template>
           </YoSection>
         </div>
         <div
@@ -159,7 +163,11 @@ watch(route, fetchGame)
           </YoSection>
           <YoSection v-if="game.genres" title="Game genres">
             <div class="grid w-full grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 xl:grid-cols-3">
-              <YoCard v-for="g of game.genres" :key="g.id" :data="{ name: g.name, image: g.image_background }" />
+              <template v-for="g of game.genres" :key="g.id">
+                <router-link :to="`/genre/${g.id}`">
+                  <YoCard :data="{ name: g.name, image: g.image_background }" />
+                </router-link>
+              </template>
             </div>
           </YoSection>
           <!-- <YoSection title="Characters">

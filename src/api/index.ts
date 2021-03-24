@@ -33,3 +33,21 @@ export async function getPublisherGames(id: number | string, page: number) {
 export async function getPublisherData(id: number | string) {
   return api.get<DeveloperData>(`publishers/${id}`).then(r => r.data)
 }
+
+export async function getGenreGames(id: number | string, page: number) {
+  const params = { genres: id, page }
+  return api.get<DeveloperGame>('games', { params }).then(r => r.data)
+}
+
+export async function getGenreData(id: number | string) {
+  return api.get<DeveloperData>(`genres/${id}`).then(r => r.data)
+}
+
+export async function getTagGames(id: number | string, page: number) {
+  const params = { tags: id, page }
+  return api.get<DeveloperGame>('games', { params }).then(r => r.data)
+}
+
+export async function getTagData(id: number | string) {
+  return api.get<DeveloperData>(`tags/${id}`).then(r => r.data)
+}
