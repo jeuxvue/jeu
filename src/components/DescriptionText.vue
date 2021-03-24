@@ -1,8 +1,10 @@
 <template>
   <div>
     <div v-if="!isTextShown">
-      <div class="flex flex-col gap-4 mt-4" v-html="text.slice(0, limit)" />
-      <a class="link" @click="isReadMoreActivated = true">Read more...</a>
+      <div class="flex flex-col gap-4 mt-4" v-html="text.slice(0, limit).split(' ').slice(0, -1).join(' ') + '...'" />
+      <div class="mt-2 text-center">
+        <a class="font-semibold link" @click="isReadMoreActivated = true">Read more...</a>
+      </div>
     </div>
     <div v-if="isTextShown" class="flex flex-col gap-4 mt-4" v-html="text" />
   </div>
@@ -17,7 +19,7 @@ const props = defineProps({
   },
   limit: {
     type: Number,
-    default: 640,
+    default: 400,
   },
 })
 
