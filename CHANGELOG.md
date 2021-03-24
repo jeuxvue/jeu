@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/jeuxvue/jeu/compare/v1.5.1...v1.6.0) (2021-03-24)
+
+
+### :purple_heart: Features
+
+* create CardGallery ([e91b4ad](https://github.com/jeuxvue/jeu/commit/e91b4adf44f2ba81a3d4e23237c3ff7674bec50e))
+* create developer page ([a1e2d10](https://github.com/jeuxvue/jeu/commit/a1e2d10da9c00d6dec20b96a1d97b696af41755d))
+* create publisher page ([edbade8](https://github.com/jeuxvue/jeu/commit/edbade864d5996f6f7d06f7d5213114b5657a799))
+
+
+### :wheelchair: Feature Improvements
+
+* add link to publisher page ([2b8e29b](https://github.com/jeuxvue/jeu/commit/2b8e29b36e10fe831e5290a2061f27323756ff9c))
+
+
+### :gear: Code Refactoring
+
+* improve text triming ([3613aaa](https://github.com/jeuxvue/jeu/commit/3613aaa2bd357a899357590680b5b667896184a4))
+
 ### [1.5.1](https://github.com/jeuxvue/jeu/compare/v1.5.0...v1.5.1) (2021-03-18)
 
 
