@@ -145,7 +145,11 @@ watch(route, fetchGame)
           </YoSection>
           <YoSection v-if="game.publishers" title="Publishers">
             <div class="grid w-full grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 xl:grid-cols-3">
-              <YoCard v-for="p of game.publishers" :key="p.id" :data="{ name: p.name, image: p.image_background }" />
+              <template v-for="p of game.publishers" :key="p.id">
+                <router-link :to="`/publisher/${p.id}`">
+                  <YoCard :data="{ name: p.name, image: p.image_background }" />
+                </router-link>
+              </template>
             </div>
           </YoSection>
           <YoSection v-if="game.stores" title="Game stores">
