@@ -24,3 +24,12 @@ export async function getDeveloperGames(id: number | string, page: number) {
 export async function getDeveloperData(id: number | string) {
   return api.get<DeveloperData>(`developers/${id}`).then(r => r.data)
 }
+
+export async function getPublisherGames(id: number | string, page: number) {
+  const params = { publishers: id, page }
+  return api.get<DeveloperGame>('games', { params }).then(r => r.data)
+}
+
+export async function getPublisherData(id: number | string) {
+  return api.get<DeveloperData>(`publishers/${id}`).then(r => r.data)
+}
