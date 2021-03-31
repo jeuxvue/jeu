@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/jeuxvue/jeu/compare/v1.7.0...v1.8.0) (2021-03-31)
+
+
+### :purple_heart: Features
+
+* add achievements subroute ([4d9c54a](https://github.com/jeuxvue/jeu/commit/4d9c54a577d7235fb5d5c2341683a814a2ba04dc))
+
 ## [1.7.0](https://github.com/jeuxvue/jeu/compare/v1.6.1...v1.7.0) (2021-03-24)
 
 
