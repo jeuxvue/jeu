@@ -26,7 +26,7 @@
       <div class="flex flex-row w-full max-w-screen-lg gap-12 xl:max-w-screen-xl">
         <YoSection v-if="developerGames?.length !== 0" class="w-full" title="Developer's games">
           <div class="flex flex-wrap w-full gap-8">
-            <router-link v-for="g in developerGames" :key="g.id" :to="`/game/${g.id}`">
+            <router-link v-for="g in developerGames" :key="g.id" :to="`/games/${g.id}`">
               <GameCard :name="g.name" :image="g.background_image" />
             </router-link>
           </div>

@@ -137,6 +137,21 @@ export type DeveloperData = {
   description: string
 }
 
+export type Achievement = {
+  id: number
+  name: string
+  description: string
+  image: string
+  percent: number
+}
+
+export type AchievementData = {
+  count: number
+  next: string
+  previous: string
+  results: Achievement[]
+}
+
 export type ApiRedirect = {
   redirect: boolean
   slug: string

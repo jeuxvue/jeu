@@ -1,6 +1,6 @@
 import api from './axios'
 
-import { Game, ApiRedirect, ApiError, DeveloperGame, DeveloperData } from './types'
+import { Game, ApiRedirect, ApiError, DeveloperGame, DeveloperData, AchievementData } from './types'
 
 export function getGame(id: number | string) {
   return api.get<Game | ApiRedirect | ApiError>(`games/${id}`).then(r => r.data)
@@ -50,4 +50,9 @@ export async function getTagGames(id: number | string, page: number) {
 
 export async function getTagData(id: number | string) {
   return api.get<DeveloperData>(`tags/${id}`).then(r => r.data)
+}
+
+export async function getGameAchievements(id: number | string, page: number) {
+  const params = { page }
+  return api.get<AchievementData>(`games/${id}/achievements`, { params }).then(r => r.data)
 }

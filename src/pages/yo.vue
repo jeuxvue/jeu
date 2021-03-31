@@ -81,6 +81,13 @@ const liked = ref(false)
           <GameCard name="Minecraft" image="https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg" />
         </div>
       </YoSection>
+      <YoSection title="Achievement card">
+        <div class="flex gap-4">
+          <AchievementCard name="Cold Pizza Eater" image="https://media.rawg.io/media/achievements/398/398ebd569c8a034e6be48cf637e84d87.jpg" />
+          <AchievementCard name="King of the Kill" image="https://media.rawg.io/media/achievements/057/057f6d1c2e4169b466f68ee1c66e8f46.jpg" />
+          <AchievementCard name="The Professional" image="https://media.rawg.io/media/achievements/4aa/4aa8b0ec17ed4786b8d4f60b384e93d9.jpg" />
+        </div>
+      </YoSection>
     </div>
   </div>
 </template>
