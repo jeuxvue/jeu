@@ -23,13 +23,13 @@ const isVisible = ref(false)
 <template>
   <div class="relative inline-block">
     <InputText
-      class="w-full"
-      v-bind='$attrs'
       v-model="value"
+      class="w-full"
+      v-bind="$attrs"
       :type="isVisible ? 'text' : 'password'"
       :placeholder="placeholder"
     />
-    <button class="absolute right-0 h-full px-2 rounded " @click="isVisible = !isVisible">
+    <button type="button" class="absolute right-0 h-full px-2 rounded " @click="isVisible = !isVisible">
       <i-carbon-view v-if="isVisible" />
       <i-carbon-view-off v-else />
     </button>
