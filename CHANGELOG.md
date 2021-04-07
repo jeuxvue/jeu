@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/jeuxvue/jeu/compare/v1.8.0...v1.9.0) (2021-04-07)
+
+
+### :purple_heart: Features
+
+* add subroutes for game ([902aa82](https://github.com/jeuxvue/jeu/commit/902aa8225c0af48d6b20564d8c25a68f9b39a11a))
+
 ## [1.8.0](https://github.com/jeuxvue/jeu/compare/v1.7.0...v1.8.0) (2021-03-31)
 
 
