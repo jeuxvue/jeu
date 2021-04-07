@@ -56,3 +56,12 @@ export async function getGameAchievements(id: number | string, page: number) {
   const params = { page }
   return api.get<AchievementData>(`games/${id}/achievements`, { params }).then(r => r.data)
 }
+
+export async function getGameAdditions(id: number | string) {
+  return api.get<DeveloperGame>(`games/${id}/additions`).then(r => r.data)
+}
+
+export async function getGameSeries(id: number | string, page: number) {
+  const params = { page }
+  return api.get<DeveloperGame>(`games/${id}/game-series`, { params }).then(r => r.data)
+}

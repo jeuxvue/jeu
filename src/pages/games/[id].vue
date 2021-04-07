@@ -57,12 +57,12 @@ watch(route, fetchGame)
             <router-link :to="`/games/${route.params.id}/achievements`" class="p-3 link">
               Achievements
             </router-link>
-            <button class="p-3 link">
-              Characters
-            </button>
-            <button class="p-3 link">
-              Staff
-            </button>
+            <router-link :to="`/games/${route.params.id}/additions`" class="p-3 link">
+              Additions
+            </router-link>
+            <router-link :to="`/games/${route.params.id}/series`" class="p-3 link">
+              Game series
+            </router-link>
             <button class="p-3 link">
               Stats
             </button>

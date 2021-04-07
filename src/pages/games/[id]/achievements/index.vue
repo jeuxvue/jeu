@@ -12,21 +12,18 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import type { Achievement, AchievementData } from '@/api/types'
 import { getGameAchievements } from '@/api/index'
+
 const route = useRoute()
-const props = defineProps({
-  routeData: {
-    type: Object,
-  },
-})
+const id = route.params.id
 
 const achievements = ref<Achievement[] | null>([])
-let page = 1
-const id = route.params.id
 const achievementData = ref<AchievementData | null>(null)
+
+let page = 1
 
 function scroll() {
   window.onscroll = () => {

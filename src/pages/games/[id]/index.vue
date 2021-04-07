@@ -35,11 +35,15 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
+import type { Game } from '@/api/types'
+
 const route = useRoute()
+
 const props = defineProps({
   routeData: {
-    type: Object,
+    type: Object as PropType<Game>,
     required: true,
   },
 })
