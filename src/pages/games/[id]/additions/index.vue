@@ -1,15 +1,9 @@
 <template>
-  <div v-if="additions?.length === 0">
+  <div v-if="games?.length === 0">
     No related games
   </div>
   <div v-else>
-    <YoSection>
-      <div class="flex gap-12 flex-wrap w-full">
-        <router-link v-for="a in additions" :key="a.id" :to="`/games/${a.id}`">
-          <GameCard :name="a.name" :image="a.background_image" />
-        </router-link>
-      </div>
-    </YoSection>
+    <CardGallery :gap="12" :games="games" :game-data="gameData" @fetch-next="fetchNext" />
   </div>
 </template>
 
@@ -22,18 +16,18 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const id = route.params.id
 
-const additionData = ref<DeveloperGame | null>(null)
-const additions = ref<Game[] | null>([])
+const gameData = ref<DeveloperGame | null>(null)
+const games = ref<Game[] | null>(null)
+let page = 1
 
-async function fetchGameAdditions() {
-  const response = await getGameAdditions(id as string)
-  if (response !== null) {
-    additionData.value = response
-    additions.value = [...additions.value, ...response.results]
-  }
+async function fetchNext() {
+  page++
+  gameData.value = await getGameAdditions(id as string, page)
+  games.value = [...games.value, ...gameData.value?.results]
 }
 
 onMounted(async() => {
-  await fetchGameAdditions()
+  gameData.value = await getGameAdditions(id as string, page)
+  games.value = gameData.value?.results || []
 })
 </script>

@@ -3,13 +3,7 @@
     No games in series
   </div>
   <div v-else>
-    <YoSection>
-      <div class="flex gap-12 flex-wrap">
-        <router-link v-for="g in games" :key="g.id" :to="`/games/${g.id}`">
-          <GameCard :name="g.name" :image="g.background_image" />
-        </router-link>
-      </div>
-    </YoSection>
+    <CardGallery :gap="12" :games="games" :game-data="gameData" @fetch-next="fetchNext" />
   </div>
 </template>
 
@@ -22,32 +16,18 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const id = route.params.id
 
-const gameSeriesData = ref<DeveloperGame | null>(null)
-const games = ref<Game[] | null>([])
-
+const gameData = ref<DeveloperGame | null>(null)
+const games = ref<Game[] | null>(null)
 let page = 1
 
-function scroll() {
-  window.onscroll = () => {
-    const bottomOfWindow = (window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight
-    if (bottomOfWindow && gameSeriesData.value?.next !== null) {
-      fetchGameSeries()
-      page++
-    }
-  }
-}
-
-async function fetchGameSeries() {
-  const response = await getGameSeries(id as string, page)
-  if (response !== null) {
-    gameSeriesData.value = response
-    games.value = [...games.value, ...response.results]
-  }
+async function fetchNext() {
+  page++
+  gameData.value = await getGameSeries(id as string, page)
+  games.value = [...games.value, ...gameData.value?.results]
 }
 
 onMounted(async() => {
-  await fetchGameSeries()
-  page++
-  scroll()
+  gameData.value = await getGameSeries(id as string, page)
+  games.value = gameData.value?.results || []
 })
 </script>
