@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/jeuxvue/jeu/compare/v1.9.0...v1.9.1) (2021-04-14)
+
+
+### :gear: Code Refactoring
+
+* GamesHeader taken from CardGallery ([331f5cd](https://github.com/jeuxvue/jeu/commit/331f5cd94a12b7f847500d89b104802a4e5d4b85))
+
 ## [1.9.0](https://github.com/jeuxvue/jeu/compare/v1.8.0...v1.9.0) (2021-04-07)
 
 
