@@ -22,11 +22,11 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { DeveloperData } from '@/api/types'
+import type { CategoryData } from '@/api/types'
 
 const props = defineProps({
   headerData: {
-    type: Object as PropType<DeveloperData | null>,
+    type: Object as PropType<CategoryData | null>,
     default: null,
   },
 })

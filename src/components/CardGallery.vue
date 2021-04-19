@@ -9,14 +9,14 @@
 </template>
 
 <script setup lang="ts">
-import type { DeveloperGame, Game } from '@/api/types'
+import type { CategoryGames, Game } from '@/api/types'
 import { defineProps, ref, watch, defineEmit, computed } from 'vue'
 import type { PropType } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 
 const props = defineProps({
   gameData: {
-    type: Object as PropType<DeveloperGame | null>,
+    type: Object as PropType<CategoryGames | null>,
     default: null,
   },
   games: {
@@ -35,7 +35,7 @@ const props = defineProps({
 
 const formattedGap = computed(() => `gap-${props.gap}`)
 
-const developerGameData = ref<DeveloperGame | null>(null)
+const developerGameData = ref<CategoryGames | null>(null)
 const developerGames = ref<Game[] | null>([])
 
 watch(() => props.gameData, gameData => developerGameData.value = gameData)

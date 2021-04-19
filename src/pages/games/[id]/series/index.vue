@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import type { DeveloperGame, Game } from '@/api/types'
+import type { CategoryGames, Game } from '@/api/types'
 import { getGameSeries } from '@/api/index'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
@@ -16,7 +16,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const id = route.params.id
 
-const gameData = ref<DeveloperGame | null>(null)
+const gameData = ref<CategoryGames | null>(null)
 const games = ref<Game[] | null>(null)
 let page = 1
 
