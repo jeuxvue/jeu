@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/jeuxvue/jeu/compare/v1.9.2...v1.9.3) (2021-04-19)
+
+
+### :bookmark_tabs: Docs
+
+* update readme ([7627ba3](https://github.com/jeuxvue/jeu/commit/7627ba33787bd648c589b6be30507f461b9d5e71))
+
 ### [1.9.2](https://github.com/jeuxvue/jeu/compare/v1.9.1...v1.9.2) (2021-04-19)
 
 
