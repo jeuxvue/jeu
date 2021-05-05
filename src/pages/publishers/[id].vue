@@ -1,5 +1,5 @@
 <template>
-  <div v-if="data === null || data === null">
+  <div v-if="data === null">
     loading
   </div>
   <div v-else class="flex flex-col items-center">
