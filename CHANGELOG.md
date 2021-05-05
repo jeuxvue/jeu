@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/jeuxvue/jeu/compare/v1.9.3...v1.10.0) (2021-05-05)
+
+
+### :broom: Others
+
+* add api call ([ce89580](https://github.com/jeuxvue/jeu/commit/ce8958088c6886b83db00f4d3abda6adbd8b9c8e))
+
+
+### :gear: Code Refactoring
+
+* change route name ([0a9ab6c](https://github.com/jeuxvue/jeu/commit/0a9ab6cfda619b393839f4b676a941d243c5f11d))
+* remove useless watcher ([60f045f](https://github.com/jeuxvue/jeu/commit/60f045fcec1a8ddd3eb198c02c13d094cf2c78f3))
+
+
+### :purple_heart: Features
+
+* create games page ([9fe9fc3](https://github.com/jeuxvue/jeu/commit/9fe9fc3222f245ba4abdc0e3f43da637546f56b8))
+
+
+### :beetle: Bug Fixes
+
+* hehe dummy ([316d7dd](https://github.com/jeuxvue/jeu/commit/316d7ddfb1736b58541a1fcb63922313000acbe0))
+* hotfix ([245065c](https://github.com/jeuxvue/jeu/commit/245065c2d2fab70522b828c1d4d7a8a6e9d04401))
+* shouldn't submit form ([d3cf313](https://github.com/jeuxvue/jeu/commit/d3cf31357cc55d490fcad052ee1f4c0f4468bdee))
+
 ### [1.9.3](https://github.com/jeuxvue/jeu/compare/v1.9.2...v1.9.3) (2021-04-19)
 
 
