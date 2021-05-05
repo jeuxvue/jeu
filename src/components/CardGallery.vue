@@ -1,7 +1,7 @@
 <template>
-  <YoSection v-if="developerGames?.length !== 0" :title="title" class="w-full">
+  <YoSection v-if="games?.length !== 0" :title="title" class="w-full">
     <div :class="formattedGap" class="flex flex-wrap w-full">
-      <router-link v-for="g in developerGames" :key="g.id" :to="`/games/${g.id}`">
+      <router-link v-for="g in games" :key="g.id" :to="`/game/${g.id}`">
         <GameCard :name="g.name" :image="g.background_image" />
       </router-link>
     </div>
@@ -36,11 +36,8 @@ const props = defineProps({
 const formattedGap = computed(() => `gap-${props.gap}`)
 
 const developerGameData = ref<CategoryGames | null>(null)
-const developerGames = ref<Game[] | null>([])
 
 watch(() => props.gameData, gameData => developerGameData.value = gameData)
-
-watch(() => props.games, games => developerGames.value = games)
 
 const emit = defineEmit(['fetch-next'])
 
