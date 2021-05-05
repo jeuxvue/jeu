@@ -121,14 +121,14 @@ export type Game = {
   }[]
 }
 
-export type DeveloperGame = {
+export type CategoryGames = {
   count: number
   next: string | null
   previous: string | null
   results: Game[]
 }
 
-export type DeveloperData = {
+export type CategoryData = {
   id: number
   name: string
   slug: string

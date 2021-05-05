@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/jeuxvue/jeu/compare/v1.9.2...v1.9.3) (2021-04-19)
+
+
+### :bookmark_tabs: Docs
+
+* update readme ([7627ba3](https://github.com/jeuxvue/jeu/commit/7627ba33787bd648c589b6be30507f461b9d5e71))
+
+### [1.9.2](https://github.com/jeuxvue/jeu/compare/v1.9.1...v1.9.2) (2021-04-19)
+
+
+### :gear: Code Refactoring
+
+* rename category types ([5e0fd6e](https://github.com/jeuxvue/jeu/commit/5e0fd6e680a3af29cc79494a179186d26367bd7a))
+
+### [1.9.1](https://github.com/jeuxvue/jeu/compare/v1.9.0...v1.9.1) (2021-04-14)
+
+
+### :gear: Code Refactoring
+
+* GamesHeader taken from CardGallery ([331f5cd](https://github.com/jeuxvue/jeu/commit/331f5cd94a12b7f847500d89b104802a4e5d4b85))
+
+## [1.9.0](https://github.com/jeuxvue/jeu/compare/v1.8.0...v1.9.0) (2021-04-07)
+
+
+### :purple_heart: Features
+
+* add subroutes for game ([902aa82](https://github.com/jeuxvue/jeu/commit/902aa8225c0af48d6b20564d8c25a68f9b39a11a))
+
 ## [1.8.0](https://github.com/jeuxvue/jeu/compare/v1.7.0...v1.8.0) (2021-03-31)
 
 
