@@ -2,6 +2,8 @@ import api from './axios'
 
 import { Game, ApiRedirect, ApiError, CategoryGames, CategoryData, AchievementData } from './types'
 
+export * from './games'
+
 export function getGame(id: number | string) {
   return api.get<Game | ApiRedirect | ApiError>(`games/${id}`).then(r => r.data)
 }
