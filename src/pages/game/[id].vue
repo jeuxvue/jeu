@@ -51,16 +51,16 @@ watch(route, fetchGame)
             <DescriptionText :text="game.description" />
           </div>
           <nav class="flex justify-around w-full mt-8 text-sm">
-            <router-link :to="`/games/${route.params.id}/`" class="p-3 link">
+            <router-link :to="`/game/${route.params.id}/`" class="p-3 link">
               Overview
             </router-link>
-            <router-link :to="`/games/${route.params.id}/achievements`" class="p-3 link">
+            <router-link :to="`/game/${route.params.id}/achievements`" class="p-3 link">
               Achievements
             </router-link>
-            <router-link :to="`/games/${route.params.id}/additions`" class="p-3 link">
+            <router-link :to="`/game/${route.params.id}/additions`" class="p-3 link">
               Additions
             </router-link>
-            <router-link :to="`/games/${route.params.id}/series`" class="p-3 link">
+            <router-link :to="`/game/${route.params.id}/series`" class="p-3 link">
               Game series
             </router-link>
             <button class="p-3 link">
