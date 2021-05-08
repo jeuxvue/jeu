@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/jeuxvue/jeu/compare/v1.10.0...v1.10.1) (2021-05-08)
+
+
+### :beetle: Bug Fixes
+
+* subroutes navigation ([d336ce6](https://github.com/jeuxvue/jeu/commit/d336ce64dee5602497ecf8686e9278af0c0a38d3))
+
+
+### :gear: Code Refactoring
+
+* flex to grid ([958c34f](https://github.com/jeuxvue/jeu/commit/958c34f18edb37ecb9ef7b12f40268e94b9f2bfc))
+
 ## [1.10.0](https://github.com/jeuxvue/jeu/compare/v1.9.3...v1.10.0) (2021-05-05)
 
 
