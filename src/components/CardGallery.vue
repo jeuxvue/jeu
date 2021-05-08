@@ -1,7 +1,7 @@
 <template>
   <YoSection v-if="games?.length !== 0" :title="title" class="w-full">
-    <div :class="formattedGap" class="flex flex-wrap w-full">
-      <router-link v-for="g in games" :key="g.id" :to="`/game/${g.id}`">
+    <div class="grid xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-4 justify-center w-full">
+      <router-link v-for="g in games" :key="g.id" class="flex justify-center" :to="`/game/${g.id}`">
         <GameCard :name="g.name" :image="g.background_image" />
       </router-link>
     </div>
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import type { CategoryGames, Game } from '@/api/types'
-import { defineProps, ref, watch, defineEmit, computed } from 'vue'
+import { defineProps, ref, watch, defineEmit } from 'vue'
 import type { PropType } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 
@@ -23,17 +23,11 @@ const props = defineProps({
     type: Object as PropType<Game[] | null>,
     default: null,
   },
-  gap: {
-    type: Number,
-    default: 8,
-  },
   title: {
     type: String,
     default: '',
   },
 })
-
-const formattedGap = computed(() => `gap-${props.gap}`)
 
 const developerGameData = ref<CategoryGames | null>(null)
 

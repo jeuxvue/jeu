@@ -3,7 +3,7 @@
     No games in series
   </div>
   <div v-else>
-    <CardGallery :gap="12" :games="games" :game-data="gameData" @fetch-next="fetchNext" />
+    <CardGallery :games="games" :game-data="gameData" @fetch-next="fetchNext" />
   </div>
 </template>
 
