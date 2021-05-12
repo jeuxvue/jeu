@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import type { CategoryGames, Game } from '@/api/types'
-import { defineProps, ref, watch, defineEmit } from 'vue'
+import { defineProps, ref, watch, defineEmit, computed } from 'vue'
 import type { PropType } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 
@@ -26,7 +26,7 @@ const props = defineProps({
   title: {
     type: String,
     default: '',
-  },
+  }
 })
 
 const developerGameData = ref<CategoryGames | null>(null)
