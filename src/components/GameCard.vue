@@ -1,7 +1,13 @@
 <template>
-  <div class="flex flex-col w-46 relative">
+  <div class="relative flex flex-col w-46">
     <a class="link">
-      <img class="object-cover object-center w-full rounded h-72 mb-1" :src="image" alt="">
+      <template v-if="image">
+        <img class="object-cover object-center w-full mb-1 rounded h-72" :src="image" alt="">
+      </template>
+      <template v-else>
+        <YoBox class="flex items-center justify-center w-full mb-1 rounded h-72"><div class="rotation">（｀Δ´）！</div></YoBox>
+      </template>
+
       {{ name }}
     </a>
   </div>
@@ -16,7 +22,22 @@ const props = defineProps({
   },
   image: {
     type: String,
-    required: true,
   },
 })
 </script>
+
+<style>
+.rotation {
+  animation: rotation 100s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
