@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/jeuxvue/jeu/compare/v1.11.0...v1.11.1) (2021-05-19)
+
+
+### :beetle: Bug Fixes
+
+* update windicss config ([e50d3b8](https://github.com/jeuxvue/jeu/commit/e50d3b8b98789f759d7215baad772edf55c0d0c1))
+
+
+### :broom: Others
+
+* add image placeholder ([031244e](https://github.com/jeuxvue/jeu/commit/031244e2ec4de8d0078fa9519b7364e483ee79de))
+* add search ([5cc5fa0](https://github.com/jeuxvue/jeu/commit/5cc5fa08f4c73370ec84ae2d66f44a3450046fb3))
+
 ## [1.11.0](https://github.com/jeuxvue/jeu/compare/v1.10.1...v1.11.0) (2021-05-12)
 
 
