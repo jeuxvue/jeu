@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const colors = require('windicss/colors')
+import { defineConfig } from 'windicss/helpers'
+import colors from 'windicss/colors'
 
-module.exports = {
+export default defineConfig({
   darkMode: 'class',
   theme: {
     extend: {
@@ -11,4 +11,4 @@ module.exports = {
       },
     },
   },
-}
+})
