@@ -2,12 +2,12 @@ import api from './axios'
 
 import { CategoryGames } from './types'
 
-export async function getGames(opts?: { page: number }) {
-  const params = { ordering: '-metacritic', ...opts }
-  return api.get<CategoryGames>('games', { params }).then(r => r.data)
+interface SearchParams {
+  search: string
+  ordering: string // '-metacritic' | 'metacritic'
+  page: number
 }
 
-export async function getGamesBySearch(query: String) {
-  const params = { search: query, ordering: '-metacritic' }
+export async function getGames(params?: Partial<SearchParams>) {
   return api.get<CategoryGames>('games', { params }).then(r => r.data)
 }

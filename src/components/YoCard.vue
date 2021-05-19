@@ -1,7 +1,7 @@
 <template>
   <YoBox class="flex p-0 overflow-hidden">
     <a>
-      <img class="w-20 h-20 object-cover" :src="data.image" alt="">
+      <img class="object-cover w-20 h-20" :src="data.image" alt="">
     </a>
     <div class="flex flex-col justify-between p-2">
       <a class="link">
