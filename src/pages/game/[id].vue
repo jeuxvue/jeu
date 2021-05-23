@@ -130,7 +130,7 @@ watch(route, fetchGame)
           <YoSection title="Tags">
             <template v-for="t in game.tags" :key="t.id">
               <YoBox class="p-1.25 text-center">
-                <router-link class="link" :to="`/tags/${t.id}`">
+                <router-link class="link" :to="`/tag/${t.id}`">
                   {{ t.name }}
                 </router-link>
               </YoBox>

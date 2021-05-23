@@ -24,7 +24,7 @@
     <YoSection v-if="routeData.genres" title="Game genres">
       <div class="grid w-full grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 xl:grid-cols-3">
         <template v-for="g of routeData.genres" :key="g.id">
-          <router-link :to="`/genres/${g.id}`">
+          <router-link :to="`/genre/${g.id}`">
             <YoCard :data="{ name: g.name, image: g.image_background }" />
           </router-link>
         </template>
