@@ -2,7 +2,7 @@
   <div class="flex flex-col w-full gap-8">
     <YoSection v-if="routeData.developers" title="Developers">
       <div class="grid w-full grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 xl:grid-cols-3">
-        <router-link v-for="d of routeData.developers" :key="d.id" :to="`/developers/${d.id}`">
+        <router-link v-for="d of routeData.developers" :key="d.id" :to="`/developer/${d.id}`">
           <YoCard :data="{ name: d.name, image: d.image_background }" />
         </router-link>
       </div>
@@ -10,7 +10,7 @@
     <YoSection v-if="routeData.publishers" title="Publishers">
       <div class="grid w-full grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2 xl:grid-cols-3">
         <template v-for="p of routeData.publishers" :key="p.id">
-          <router-link :to="`/publishers/${p.id}`">
+          <router-link :to="`/publisher/${p.id}`">
             <YoCard :data="{ name: p.name, image: p.image_background }" />
           </router-link>
         </template>

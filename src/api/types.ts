@@ -128,6 +128,21 @@ export type CategoryGames = {
   results: Game[]
 }
 
+export type Creators = {
+  games_count: number
+  id: number
+  image_background: string
+  name: string
+  slug: string
+}
+
+export type CategoryCreators = {
+  count: number
+  next: string | null
+  previous: string | null
+  results: Creators[]
+}
+
 export type CategoryData = {
   id: number
   name: string
