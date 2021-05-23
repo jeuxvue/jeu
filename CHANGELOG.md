@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/jeuxvue/jeu/compare/v1.11.1...v1.12.0) (2021-05-23)
+
+
+### :purple_heart: Features
+
+* add new search pages for developers and publishers ([1c71164](https://github.com/jeuxvue/jeu/commit/1c71164bbd3820f28f08e2ae207f9b1f4e282df1))
+
 ### [1.11.1](https://github.com/jeuxvue/jeu/compare/v1.11.0...v1.11.1) (2021-05-19)
 
 
