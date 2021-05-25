@@ -9,6 +9,7 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.11.16",
     "@vueuse/core": "^4.1.0",
     "@vueuse/head": "^0.2.3",
     "axios": "^0.21.1",

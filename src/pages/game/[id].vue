@@ -1,17 +1,17 @@
-<script setup lang='ts'>
-import { getGame } from '@/api'
+<script setup lang="ts">
+import { getGame, addToList, removeFromList, useUser, useList } from '@/api'
 import type { GameResponse } from '@/api/types'
-import { onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
+const gameId = route.params.id as string
 
 const game = ref<GameResponse | null>(null)
 
 async function fetchGame() {
-  const id = route.params.id as string
-  const response = await getGame(id)
+  const response = await getGame(gameId)
 
   if (response === null || 'detail' in response) return
 
@@ -24,6 +24,37 @@ async function fetchGame() {
 
 onMounted(fetchGame)
 watch(route, fetchGame)
+
+const list = useList()
+
+const isAdded = computed(() => {
+  if (!list.value) return false
+  return !!list.value.find(el => String(el.game_id) === gameId)
+})
+
+watchEffect(() => {
+  console.log(list.value, list.value?.find(el => el.game_id == gameId))
+  console.log(isAdded.value)
+})
+
+const user = useUser()
+
+function handleAddToList() {
+  if (user.value) {
+    addToList({
+      userId: user.value?.id,
+      gameId: Number(gameId),
+      gameCover: game.value?.background_image,
+      gameName: game.value?.name,
+    })
+  }
+}
+
+function handleRemoveFromList() {
+  console.log(user.value?.id, Number(gameId))
+  if (user.value)
+    removeFromList(user.value?.id, Number(gameId))
+}
 </script>
 
 <template>
@@ -37,10 +68,19 @@ watch(route, fetchGame)
         <div class="flex flex-col flex-shrink-0 gap-4 -mt-40 w-54">
           <img class="object-cover object-center w-full rounded h-72" :src="game.background_image" alt="">
           <div class="flex w-full gap-4">
-            <button class="flex-grow btn btn-primary">
-              Add to List
-            </button>
-            <LikeButton />
+            <template v-if="user">
+              <template v-if="isAdded">
+                <button class="flex-grow btn btn-primary" @click="handleRemoveFromList">
+                  Remove from List
+                </button>
+              </template>
+              <template v-else>
+                <button class="flex-grow btn btn-primary" @click="handleAddToList">
+                  Add to List
+                </button>
+              </template>
+              <LikeButton />
+            </template>
           </div>
         </div>
         <div class="">

@@ -13,8 +13,9 @@ useHead({
 </script>
 
 <template>
-  <main class="text-gray-700 dark:text-gray-200">
-    <RouterView />
-    <YoFooter />
+  <main class="text-gray-700 dark:text-gray-200 flex flex-col min-h-screen">
+    <YoHeader />
+    <RouterView class="flex-grow" />
+    <YoFooter class="mt-8" />
   </main>
 </template>

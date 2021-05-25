@@ -1,31 +1,35 @@
 <template>
-  <div v-if="data === null || data === null">
-    loading
-  </div>
-  <div v-else class="flex flex-col max-w-screen-lg m-auto xl:max-w-screen-xl">
-    <YoBox class="flex items-end w-full gap-4 mt-8">
-      <InputWrap class="flex-grow" title="Search for a game">
-        <InputText v-model="searchQuery" class="w-full" @keydown.enter="handleSearch" />
-      </InputWrap>
-      <InputWrap title="Order by">
-        <div class="flex gap-4">
-          <Dropdown v-model="searchOrdering" :options="orderingOptions" class="w-min" />
-          <Dropdown v-model="searchOrder" :options="orderOptions" class="w-min" />
-        </div>
-      </InputWrap>
-      <!-- <InputWrap title="">
+  <template v-if="data === null">
+    <div>
+      loading
+    </div>
+  </template>
+  <template v-else>
+    <div class="flex flex-col max-w-screen-lg m-auto xl:max-w-screen-xl">
+      <YoBox class="flex items-end w-full gap-4 mt-8">
+        <InputWrap class="flex-grow" title="Search for a game">
+          <InputText v-model="searchQuery" class="w-full" @keydown.enter="handleSearch" />
+        </InputWrap>
+        <InputWrap title="Order by">
+          <div class="flex gap-4">
+            <Dropdown v-model="searchOrdering" :options="orderingOptions" class="w-min" />
+            <Dropdown v-model="searchOrder" :options="orderOptions" class="w-min" />
+          </div>
+        </InputWrap>
+        <!-- <InputWrap title="">
         <Dropdown v-model="searchOrder" :options="orderOptions" class="w-full" />
       </InputWrap> -->
-      <button class="btn btn-primary" @click="handleSearch">
-        Search
-      </button>
-    </YoBox>
-  </div>
-  <div class="flex justify-center w-full mt-10">
-    <div class="flex flex-row w-full max-w-screen-lg gap-12 xl:max-w-screen-xl">
-      <CardGallery :games="games" :game-data="data" @fetch-next="fetchNext" />
+        <button class="btn btn-primary" @click="handleSearch">
+          Search
+        </button>
+      </YoBox>
     </div>
-  </div>
+    <div class="flex justify-center w-full mt-10">
+      <div class="flex flex-row w-full max-w-screen-lg gap-12 xl:max-w-screen-xl">
+        <CardGallery :games="games" :game-data="data" @fetch-next="fetchNext" />
+      </div>
+    </div>
+  </template>
 </template>
 
 <script setup lang="ts">
