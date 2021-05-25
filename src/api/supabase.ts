@@ -46,23 +46,23 @@ export function useList(userId: string) {
         .match({ user_id: userId })
 
       list.value = data
+
+      supabase
+        .from('list')
+        .on('*', (payload) => {
+          console.log('Change received!', payload)
+          ;(async() => {
+            const { data, error } = await supabase
+              .from('list')
+              .select('*')
+              .match({ user_id: userId })
+
+            list.value = data
+          })()
+        })
+        .subscribe()
     })()
   }
-
-  supabase
-    .from('list')
-    .on('*', (payload) => {
-      console.log('Change received!', payload)
-      ;(async() => {
-        const { data, error } = await supabase
-          .from('list')
-          .select('*')
-          .match({ user_id: userId })
-
-        list.value = data
-      })()
-    })
-    .subscribe()
 
   return list
 }
