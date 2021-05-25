@@ -148,8 +148,8 @@ watch(list, async() => {
                 <div class="text-xl">
                   {{ game.game_name }}
                 </div>
-                <input :disabled="!isMe" :value="game.score || 0" class="ml-auto w-10 bg-gray-900 text-gray-500 px-2 py-1 rounded" type="text" @change="handleChangeScore($event, game.game_id)">
-                <select :disabled="!isMe" :value="game.status || 'none'" class=" bg-gray-900 text-gray-500 px-2 py-1 rounded" @change="handleChangeStatus($event, game.game_id)">
+                <input :disabled="!isMe" :value="game.score || 0" class="ml-auto w-10 dark:bg-gray-900 bg-blue-gray-100 text-gray-500 px-2 py-1 rounded" type="text" @change="handleChangeScore($event, game.game_id)">
+                <select :disabled="!isMe" :value="game.status || 'none'" class=" dark:bg-gray-900 bg-blue-gray-100 text-gray-500 px-2 py-1 rounded" @change="handleChangeStatus($event, game.game_id)">
                   <option value="none">
                     None
                   </option>
