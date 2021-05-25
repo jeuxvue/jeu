@@ -21,14 +21,6 @@ const isMe = computed(() => {
   return userId === currentUser.value?.id || false
 })
 
-watch(list, async() => {
-  if (list.value !== null) {
-    console.log(list.value)
-    const ids = list.value.map(el => el.game_id)
-    games.value = await getGamesByIds(ids)
-  }
-}, { immediate: true })
-
 function handleRemoveFromList(gameId: number) {
   if (currentUser.value)
     removeFromList(currentUser.value?.id, Number(gameId))
@@ -84,6 +76,13 @@ const games = computed(() => {
   }
 })
 
+watch(list, async() => {
+  if (list.value !== null) {
+    console.log(list.value)
+    const ids = list.value.map(el => el.game_id)
+    games.value = await getGamesByIds(ids)
+  }
+}, { immediate: true })
 </script>
 
 <template>
