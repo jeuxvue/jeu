@@ -37,12 +37,13 @@ export function useUser() {
 
 const list = ref<null | any[]>(null)
 
-export function useList() {
+export function useList(userId: string) {
   if (!list.value) {
     (async() => {
       const { data, error } = await supabase
         .from('list')
         .select('*')
+        .match({ user_id: userId })
 
       list.value = data
     })()
@@ -56,6 +57,7 @@ export function useList() {
         const { data, error } = await supabase
           .from('list')
           .select('*')
+          .match({ user_id: userId })
 
         list.value = data
       })()

@@ -5,8 +5,8 @@ import { onMounted, watchEffect, watch, ref, computed, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
-const list = useList()
 const userId = route.params.id as string
+const list = useList(userId)
 const currentUser = useUser()
 
 const user = ref<null | any>(null)
