@@ -90,7 +90,7 @@ watch(list, async() => {
     <div class="flex justify-center">
       <div class="max-w-screen-lg w-full flex flex-row gap-8 mt-8">
         <YoBox class="flex flex-col">
-          <img class="ro unded-full w-48 h-48" :src="user?.avatar" alt="">
+          <img class="rounded-full w-48 h-48" :src="user?.avatar" alt="">
           <div class="mt-4 text-3xl font-semibold tracking-wide">
             {{ user?.name }}
           </div>
